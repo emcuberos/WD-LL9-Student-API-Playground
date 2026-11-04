@@ -46,7 +46,7 @@ async function fetchCountry() {
        API key must allow-list your origin (127.0.0.1 / localhost/ or your live preview url without the HTTPS)
        on the API Keys page at restcountries.com.
        ------------------------------------------------------------ */
-    const API_KEY = "";
+    const API_KEY = "rc_live_c8b8eb2c4b1c46d39948424f2604e0ef";
     const url =
       `https://api.restcountries.com/countries/v5?q=${encodeURIComponent(countryName)}` +
       `&response_fields=names.common,capitals,region,population,languages,flag.url_png,flag.description`;
@@ -76,7 +76,6 @@ async function fetchCountry() {
        TEAM BUILD STARTS HERE
        ============================================================ */
 
-
     /* ============================================================
        TEAM BUILD STARTS HERE
        The instructor demo stops at Step 6. Steps 7-10 are your
@@ -96,7 +95,6 @@ async function fetchCountry() {
        flagImg.alt = ???
        ------------------------------------------------------------ */
 
-
     /* ------------------------------------------------------------
        STEP 8: Display Capital, Region, Population
        ------------------------------------------------------------
@@ -113,7 +111,6 @@ async function fetchCountry() {
        populationEl.textContent = ???
        ------------------------------------------------------------ */
 
-
     /* ------------------------------------------------------------
        STEP 9: Display Languages
        ------------------------------------------------------------
@@ -128,7 +125,6 @@ async function fetchCountry() {
        languagesEl.textContent = ???
        ------------------------------------------------------------ */
 
-
     /* ------------------------------------------------------------
        STEP 10a: Improve the experience — clean up on SUCCESS
        ------------------------------------------------------------
@@ -137,10 +133,7 @@ async function fetchCountry() {
        - Reveal the result card:      resultCard.classList.remove('hidden');
        - Make sure old errors are gone: errorEl.classList.add('hidden');
        ------------------------------------------------------------ */
-
-
   } catch (error) {
-
     /* ------------------------------------------------------------
        STEP 10b: Improve the experience — error handling
        ------------------------------------------------------------
@@ -153,20 +146,18 @@ async function fetchCountry() {
            errorEl.classList.remove('hidden');
        ------------------------------------------------------------ */
     console.error(error);
-
   }
 }
-
 
 /* ------------------------------------------------------------
    Helper functions — already built for you.
    ------------------------------------------------------------ */
 function showLoading() {
-  loadingEl.classList.remove('hidden');
-  errorEl.classList.add('hidden');
-  resultCard.classList.add('hidden');
+  loadingEl.classList.remove("hidden");
+  errorEl.classList.add("hidden");
+  resultCard.classList.add("hidden");
 }
 
 function hideLoading() {
-  loadingEl.classList.add('hidden');
+  loadingEl.classList.add("hidden");
 }
